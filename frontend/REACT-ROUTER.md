@@ -77,3 +77,17 @@ const Contact = () => <div className="contact">
     <h1>Contact Me</h1>
     <p>Contact me via email!</p>
   </div>;```
+
+# Tests
+
+App.test.js:
+
+```JavaScript:
+import { BrowserRouter } from "react-router-dom";
+
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
+```
