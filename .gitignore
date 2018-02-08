@@ -1,0 +1,17 @@
+*.pyc
+__pycache__
+.Python
+bin/
+include/
+lib/
+api/bin
+api/include
+api/lib
+api/.Python
+api/db.sqlite3
+log.html
+output.xml
+pip-selfcheck.json
+report.html
+selenium-screenshot-*.png
+

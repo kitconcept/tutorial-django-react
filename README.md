@@ -98,6 +98,40 @@ yarn start
 
 Your browser should automatically open with 'localhost:3000' and show the create-react-app standard HTML view.
 
+## Django CORS
+
+Install corsheaders:
+
+```bash
+bin/pip3 install django-cors-headers
+```
+
+settings.py:
+
+```python
+INSTALLED_APPS = (
+    ...
+    'corsheaders',
+    ...
+)
+````
+
+settings.py:
+
+```python
+MIDDLEWARE = [
+    ...
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    ...
+]````
+
+settings.py:
+
+```python
+CORS_ORIGIN_ALLOW_ALL = True
+````
+
 # Make React app query the Django Backend
 
 At first we create a state in the main React app to hold the information we fetch from the backend.
