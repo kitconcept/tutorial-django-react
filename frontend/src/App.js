@@ -3,8 +3,20 @@ import './App.css';
 
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import Home from './containers/home';
-import About from './containers/about';
+
+const Home = () => (
+  <div>
+    <h1>Home</h1>
+    <p>This is my home!</p>
+  </div>
+);
+
+const About = () => (
+  <div>
+    <h1>About Us</h1>
+    <p>This is me!</p>
+  </div>
+);
 
 const App = () => (
   <div>
