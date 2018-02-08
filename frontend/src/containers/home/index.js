@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 const Home = props => (
   <div>
     <h1>Home</h1>
-    <p>Welcome home!</p>
+    <p>Edit me in src/containers/home/index.js</p>
     <button onClick={() => props.changePage()}>
       Go to about page via redux
     </button>
