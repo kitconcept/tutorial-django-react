@@ -1,8 +1,17 @@
-# React Router
+# Adding React Router v4 to Create React App
 
+Install create-react-app globally:
+
+```bash:
+npm install -g create-react-app
+```
+
+Create a new React app:
+
+```bash:
 create-react-app my-app
 cd my-app
-yarn install
+yarn install```
 
 Install react-router:
 
@@ -91,3 +100,5 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 ```
+
+Further reading: https://blog.pusher.com/getting-started-with-react-router-v4/
