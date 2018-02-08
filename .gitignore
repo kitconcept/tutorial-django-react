@@ -14,4 +14,4 @@ output.xml
 pip-selfcheck.json
 report.html
 selenium-screenshot-*.png
-
+selenium/
