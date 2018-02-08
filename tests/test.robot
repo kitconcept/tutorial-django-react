@@ -21,6 +21,12 @@ Scenario: React is up and running
   Wait until page contains  Welcome to React
   Page should contain  Welcome to React
 
+Scenario: Navigate to About
+  Go to  ${SERVER}
+  Wait until page contains  Welcome to React
+  Click link  About
+  Wait until page contains  About Us
+  Page should contain  About Us
 
 *** Keywords ***
 
