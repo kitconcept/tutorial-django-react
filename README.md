@@ -191,6 +191,14 @@ When the React app loads in your browser you will most likely see an error in yo
 https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi
 
 
+# REST API communication
+
+Options:
+
+- fetch (ES6)
+- Superagent
+- Axios
+
 # Static Code Analysis
 
 eslint...
