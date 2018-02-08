@@ -1,6 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import App from './App';
+
+it('works', () => {
+  const myvar = 1;
+  expect(myvar).toEqual(1);
+});
 
 /*
 it('renders without crashing', () => {
