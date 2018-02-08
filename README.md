@@ -189,3 +189,36 @@ class App extends Component {
 When the React app loads in your browser you will most likely see an error in your JavaScript console. This is caused by CORS preventing you from serving content from different origins. Install the CORS plugin for Chrome for development:
 
 https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi
+
+
+# Static Code Analysis
+
+eslint...
+
+# Automatic Code Formatting
+
+Add dependencies:
+
+```bash
+yarn add husky lint-staged prettier
+```
+
+package.json:
+
+```JavaScript
+  "dependencies": {
+    // ...
+  },
++ "lint-staged": {
++   "src/**/*.{js,jsx,json,css}": [
++     "prettier --single-quote --write",
++     "git add"
++   ]
++ },
+  "scripts": {
++   "precommit": "lint-staged",```
+
+Source and full tutorial:
+
+https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#formatting-code-automatically
+
