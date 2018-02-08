@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import request from 'superagent';
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -12,21 +12,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      'http://127.0.0.1:8000/users/1',
-      {
-        headers: {
-          'Accept': 'application/json'
-        }
-      }
-    ).then((response) => response.json())
-    .then((responseData) => {
-      this.setState({ user: responseData });
-      console.log('Fetch from backend successful!')
-    })
-    .catch((error) => {
-      console.log('Error fetching and parsing data', error);
-    });
+    request
+      .get('http://127.0.0.1:8000/users/1/')
+      .set('Accept', 'application/json')
+      .then(response => response.body)
+      .then(responseData => {
+        this.setState({ user: responseData });
+        console.log('Fetch from backend successful!');
+      })
+      .catch(error => {
+        console.log('Error fetching and parsing data', error);
+      });
   }
 
   render() {
