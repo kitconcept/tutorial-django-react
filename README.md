@@ -250,3 +250,11 @@ vscode settings:
 "[javascript]": {
     "editor.formatOnSave": true
 }```
+
+
+# Router / Redux
+
+Add dependencies:
+
+```bash:
+yarn add redux react-redux react-router-dom react-router-redux@next redux-thunk history --save
