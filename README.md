@@ -216,9 +216,29 @@ package.json:
 +   ]
 + },
   "scripts": {
-+   "precommit": "lint-staged",```
++   "precommit": "lint-staged",
+```
 
 Source and full tutorial:
 
 https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#formatting-code-automatically
 
+## Prettier IDE support
+
+You should install a prettier plugin to your favorite editor.
+
+### Prettier formatter for Visual Studio Code
+
+Install Prettier formatter for Visual Studio Code:
+
+https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+
+vscode settings:
+
+```JavaScript
+// Set the default
+"editor.formatOnSave": false,
+// Enable per-language
+"[javascript]": {
+    "editor.formatOnSave": true
+}```
