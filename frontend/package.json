@@ -5,16 +5,20 @@
   "dependencies": {
     "history": "^4.7.2",
     "husky": "^0.14.3",
+    "jwt-decode": "^2.2.0",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2",
     "react": "^16.2.0",
+    "react-cookie": "^2.1.2",
     "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "1.1.0",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "serialize-javascript": "^1.4.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
