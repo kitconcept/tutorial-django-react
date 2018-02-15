@@ -18,6 +18,13 @@ const About = () => (
   </div>
 );
 
+const Users = () => (
+  <div>
+    <h1>Users</h1>
+    <p>List of users</p>
+  </div>
+);
+
 const App = () => (
   <div>
     <div className="App">
@@ -26,10 +33,12 @@ const App = () => (
         <h1 className="App-title">Welcome to React</h1>
         <Link to="/">Home</Link>
         <Link to="/about-us">About</Link>
+        <Link to="/users">Users</Link>
       </header>
       <main>
         <Route exact path="/" component={Home} />
         <Route exact path="/about-us" component={About} />
+        <Route exact path="/users" component={Users} />
       </main>
     </div>
   </div>
