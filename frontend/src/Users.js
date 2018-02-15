@@ -2,7 +2,7 @@ import { Component, React} from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 import PropTypes from "prop-types";
-import { getBaseUrl } from "./helpers/Url/Url";
+// import { getBaseUrl } from "./helpers/Url/Url";
 import getUsers from "./reducers/users/users";
 
 /**
@@ -18,10 +18,9 @@ class Users extends Component {
    */
   static propTypes = {
     getUsers: PropTypes.func.isRequired,
-    pathname: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.string,
+        username: PropTypes.string,
         url: PropTypes.string,
       }),
     ).isRequired,
@@ -33,7 +32,7 @@ class Users extends Component {
    * @returns {undefined}
    */
   componentWillMount() {
-    this.props.getUsers(getBaseUrl(this.props.pathname));
+    this.props.getUsers();
   }
 
   /**
@@ -43,9 +42,7 @@ class Users extends Component {
    * @returns {undefined}
    */
   componentWillReceiveProps(nextProps) {
-    if (nextProps.pathname !== this.props.pathname) {
-      this.props.getUsers(getBaseUrl(nextProps.pathname));
-    }
+    this.props.getUsers();
   }
 
   /**

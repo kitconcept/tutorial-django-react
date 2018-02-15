@@ -7,7 +7,7 @@ import { map } from 'lodash';
 
 import config from '../../config';
 
-export const GET_USERS = 'GET_USERS';
+import { GET_USERS } from "../../constants/ActionTypes";
 
 const initialState = {
   error: null,
