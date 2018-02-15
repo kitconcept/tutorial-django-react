@@ -3,6 +3,7 @@ import './App.css';
 
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import Users from './Users';
 
 const Home = () => (
   <div>
@@ -15,13 +16,6 @@ const About = () => (
   <div>
     <h1>About Us</h1>
     <p>This is me!</p>
-  </div>
-);
-
-const Users = () => (
-  <div>
-    <h1>Users</h1>
-    <p>List of users</p>
   </div>
 );
 
