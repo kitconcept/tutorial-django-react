@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-plugin-add-module-exports": "^0.2.1",
     "history": "^4.7.2",
     "husky": "^0.14.3",
     "jwt-decode": "^2.2.0",
@@ -21,6 +22,9 @@
     "serialize-javascript": "^1.4.0",
     "superagent": "^3.8.2"
   },
+  "plugins": [
+    "add-module-exports"
+  ],
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
       "prettier --single-quote --write",
