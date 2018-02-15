@@ -10,7 +10,9 @@ import configureStore from './store';
 
 import './index.css';
 
-import { Api, persistAuthToken } from './helpers';
+// import { Api, persistAuthToken } from './helpers';
+import Api from './helpers/Api/Api';
+import { persistAuthToken } from './helpers/AuthToken/AuthToken';
 // import { browserHistory, Router } from 'react-router';
 // import { syncHistoryWithStore } from "react-router-redux";
 
