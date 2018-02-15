@@ -60,12 +60,7 @@ class Users extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { items: state.users.items };
-}
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getUsers }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Users);
+export default connect(
+  state => ({ items: state.users.items }),
+  dispatch => bindActionCreators({ getUsers }, dispatch)
+)(Users);
