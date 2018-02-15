@@ -18,7 +18,8 @@
     "react-scripts": "1.1.0",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "serialize-javascript": "^1.4.0"
+    "serialize-javascript": "^1.4.0",
+    "superagent": "^3.8.2"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
