@@ -3,4 +3,4 @@
  * @module middleware
  * @example import { api } from 'middleware';
  */
-// export api from "./api";
+export { api } from './api';

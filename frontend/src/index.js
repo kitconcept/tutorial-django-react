@@ -11,7 +11,7 @@ import configureStore from './store';
 import './index.css';
 
 import { Api, persistAuthToken } from './helpers';
-import { browserHistory, Router } from 'react-router';
+// import { browserHistory, Router } from 'react-router';
 // import { syncHistoryWithStore } from "react-router-redux";
 
 const myapi = new Api();

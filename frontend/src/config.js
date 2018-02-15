@@ -13,7 +13,7 @@ export default defaults(
   },
   {
     host: 'localhost',
-    port: '4300',
-    apiPath: 'http://localhost:8080/Plone'
+    port: '3000',
+    apiPath: 'http://localhost:8000/'
   }
 );
