@@ -1,9 +1,9 @@
-import { Component, React} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from "redux";
-import PropTypes from "prop-types";
+import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 // import { getBaseUrl } from "./helpers/Url/Url";
-import getUsers from "./reducers/users/users";
+import getUsers from './actions/users/users';
 
 /**
  * Users container class.
@@ -21,9 +21,9 @@ class Users extends Component {
     items: PropTypes.arrayOf(
       PropTypes.shape({
         username: PropTypes.string,
-        url: PropTypes.string,
-      }),
-    ).isRequired,
+        url: PropTypes.string
+      })
+    ).isRequired
   };
 
   /**
@@ -56,19 +56,16 @@ class Users extends Component {
         <h1>Users</h1>
         <p>List of users</p>
       </div>
-    )
+    );
   }
 }
 
 function mapStateToProps(state) {
-  return { items: state.users.items }
+  return { items: state.users.items };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getUsers }, dispatch)
+  return bindActionCreators({ getUsers }, dispatch);
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Users)
+export default connect(mapStateToProps, mapDispatchToProps)(Users);

@@ -16,6 +16,7 @@ export default api => ({ dispatch, getState }) => next => action => {
 
   const { promise, type, ...rest } = action;
 
+  console.log(action);
   if (!promise) {
     return next(action);
   }

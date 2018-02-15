@@ -13,7 +13,7 @@ import { GET_USERS } from '../../constants/ActionTypes';
  */
 export default function getUsers(url) {
   return {
-    type: GET_USERS,
+    type: 'GET_USERS',
     promise: api => api.get(`${url}/users`)
   };
 }
