@@ -28,6 +28,13 @@ Scenario: Navigate to About
   Wait until page contains  About Us
   Page should contain  About Us
 
+Scenario: Navigate to Users
+  Go to  ${SERVER}
+  Wait until page contains  Welcome to React
+  Click link  Users
+  Wait until page contains  Users
+  Page should contain  List of users
+
 *** Keywords ***
 
 Test Setup
