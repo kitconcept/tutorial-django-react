@@ -37,14 +37,14 @@ Scenario: Navigate to Users
   Wait until page contains  Users
   Page should contain  List of users
 
-Scenario: List Users
-  Go to  ${SERVER}
-  Wait until page contains  Welcome to React
-  Click link  Users
-  Wait until page contains  Users
-  Page should contain  List of users
-  Page should contain  admin
-  Page should contain  admin@example.com
+# Scenario: List Users
+#   Go to  ${SERVER}
+#   Wait until page contains  Welcome to React
+#   Click link  Users
+#   Wait until page contains  Users
+#   Page should contain  List of users
+#   Page should contain  admin
+#   Page should contain  admin@example.com
 
 *** Keywords ***
 
