@@ -42,7 +42,7 @@ class Users extends Component {
    * @returns {undefined}
    */
   componentWillReceiveProps(nextProps) {
-    this.props.getUsers();
+    // this.props.getUsers();
   }
 
   /**
@@ -50,13 +50,17 @@ class Users extends Component {
    * @method render
    * @returns {string} Markup for the component.
    */
+
   render() {
-    return (
-      <div>
+    return <div>
         <h1>Users</h1>
         <p>List of users</p>
-      </div>
-    );
+        <ul>
+          {this.props.items.map(function(listValue) {
+            return <li>{listValue.title} ({listValue.email})</li>;
+          })}
+        </ul>
+      </div>;
   }
 }
 

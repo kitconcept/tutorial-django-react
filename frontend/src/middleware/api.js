@@ -10,13 +10,13 @@
  * @returns {Promise} Action promise.
  */
 export default api => ({ dispatch, getState }) => next => action => {
+
   if (typeof action === 'function') {
     return action(dispatch, getState);
   }
 
   const { promise, type, ...rest } = action;
 
-  console.log(action);
   if (!promise) {
     return next(action);
   }
@@ -29,10 +29,10 @@ export default api => ({ dispatch, getState }) => next => action => {
     error => next({ ...rest, error, type: `${type}_ERROR` })
   );
   /*
-    .catch(error => {
-      next({ ...rest, error, type: `${type}_ERROR` });
-    });
-    */
+  .catch(error => {
+    next({ ...rest, error, type: `${type}_ERROR` });
+  });
+  */
 
   return actionPromise;
 };

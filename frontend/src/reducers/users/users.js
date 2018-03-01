@@ -36,9 +36,9 @@ export default function users(state = initialState, action = {}) {
       return {
         ...state,
         error: null,
-        items: map(action.result.items, item => ({
-          title: item.title,
-          url: item['@id'].replace(config.apiPath, '')
+        items: map(action.result, item => ({
+          title: item.username,
+          email: item.email
         })),
         loaded: true,
         loading: false

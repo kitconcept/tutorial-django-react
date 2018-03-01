@@ -36,15 +36,14 @@ export default class Api {
       this[method] = (path, { params, data, type } = {}) =>
         new Promise((resolve, reject) => {
           const request = superagent[method](formatUrl(path));
-
           if (params) {
             request.query(params);
           }
 
-          const authToken = cookie.load('auth_token');
+          /*const authToken = cookie.load('auth_token');
           if (authToken) {
             request.set('Authorization', `Bearer ${authToken}`);
-          }
+          }*/
 
           request.set('Accept', 'application/json');
 
