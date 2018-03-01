@@ -10,6 +10,8 @@ ${BROWSER}              chrome
 
 Documentation   Django React Tutorial
 Library         Selenium2Library  timeout=30  implicit_wait=0
+Library         DebugLibrary
+
 Test Setup      Test Setup
 Test Teardown   Close Browser
 
@@ -27,6 +29,22 @@ Scenario: Navigate to About
   Click link  About
   Wait until page contains  About Us
   Page should contain  About Us
+
+Scenario: Navigate to Users
+  Go to  ${SERVER}
+  Wait until page contains  Welcome to React
+  Click link  Users
+  Wait until page contains  Users
+  Page should contain  List of users
+
+# Scenario: List Users
+#   Go to  ${SERVER}
+#   Wait until page contains  Welcome to React
+#   Click link  Users
+#   Wait until page contains  Users
+#   Page should contain  List of users
+#   Page should contain  admin
+#   Page should contain  admin@example.com
 
 *** Keywords ***
 

@@ -3,6 +3,7 @@ import './App.css';
 
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import Users from './Users';
 
 const Home = () => (
   <div>
@@ -26,10 +27,12 @@ const App = () => (
         <h1 className="App-title">Welcome to React</h1>
         <Link to="/">Home</Link>
         <Link to="/about-us">About</Link>
+        <Link to="/users">Users</Link>
       </header>
       <main>
         <Route exact path="/" component={Home} />
         <Route exact path="/about-us" component={About} />
+        <Route exact path="/users" component={Users} />
       </main>
     </div>
   </div>

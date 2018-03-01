@@ -4,12 +4,15 @@ import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
+import api from './middleware/api';
+import Api from './helpers/Api/Api';
+import userReducer from './reducers/users/users';
 
 export const history = createHistory();
 
 const initialState = {};
 const enhancers = [];
-const middleware = [thunk, routerMiddleware(history)];
+const middleware = [thunk, routerMiddleware(history), api(new Api())];
 
 if (process.env.NODE_ENV === 'development') {
   const devToolsExtension = window.devToolsExtension;
@@ -22,7 +25,8 @@ if (process.env.NODE_ENV === 'development') {
 const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
 
 const rootReducer = combineReducers({
-  routing: routerReducer
+  routing: routerReducer,
+  users: userReducer
 });
 
 const store = createStore(rootReducer, initialState, composedEnhancers);
