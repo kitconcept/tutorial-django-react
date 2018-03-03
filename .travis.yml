@@ -19,7 +19,7 @@ install:
   - (cd frontend && yarn install)
 script:
   - (cd frontend && yarn test)
-  - pybot api/test.robot
+  - (cd api && pybot test.robot)
 notifications:
   email:
   - stollenwerk@kitconcept.com
