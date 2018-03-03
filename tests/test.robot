@@ -53,7 +53,7 @@ Scenario: List Users
 Test Setup
   Start Chrome
   Start Django
-  Start Webpack  yarn start  path=../frontend
+  Start Webpack  BROWSER=none yarn start  path=../frontend
 
 Start Chrome
   ${options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
