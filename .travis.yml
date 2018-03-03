@@ -14,8 +14,8 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
 install:
   - pip install -r tests/requirements.txt
+  - pip install -r api/requirements.txt
   - (cd frontend && yarn install)
-  - (cd frontend && yarn start &)
 script:
   - (cd frontend && yarn test)
   - pybot tests/test.robot
