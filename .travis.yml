@@ -1,4 +1,6 @@
 language: python
+python:
+  - "3.6"
 dist: trusty
 addons:
   apt:
@@ -13,12 +15,11 @@ before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
 install:
-  - pip install -r tests/requirements.txt
+  - pip install -r api/requirements.txt
   - (cd frontend && yarn install)
-  - (cd frontend && yarn start &)
 script:
   - (cd frontend && yarn test)
-  - pybot tests/test.robot
+  - (cd api && pybot test.robot)
 notifications:
   email:
   - stollenwerk@kitconcept.com

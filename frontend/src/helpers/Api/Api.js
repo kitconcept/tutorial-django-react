@@ -4,7 +4,7 @@
  */
 
 import superagent from 'superagent';
-import cookie from 'react-cookie';
+// import cookie from 'react-cookie';
 
 import config from '../../config';
 
