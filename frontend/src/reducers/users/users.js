@@ -4,9 +4,6 @@
  */
 
 import { map } from 'lodash';
-
-import config from '../../config';
-
 import { GET_USERS } from "../../constants/ActionTypes";
 
 const initialState = {

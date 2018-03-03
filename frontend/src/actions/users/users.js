@@ -3,8 +3,6 @@
  * @module actions/users/users
  */
 
-import { GET_USERS } from '../../constants/ActionTypes';
-
 /**
  * Get users.
  * @function getUsers

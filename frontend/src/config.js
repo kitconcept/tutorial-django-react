@@ -14,6 +14,6 @@ export default defaults(
   {
     host: 'localhost',
     port: '3000',
-    apiPath: 'http://localhost:8000'
+    apiPath: 'http://localhost:55001'
   }
 );
