@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 CURRENT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
-all: clean build test
+all: build test
 
 clean:
 	@echo "Clean"
@@ -12,14 +12,14 @@ build:
 	make build-frontend
 
 build-tests:
-	@echo "Build"
-	(cd tests && virtualenv .)
-	(cd tests && bin/pip install -r requirements.txt --upgrade)
+	@echo "Build Tests"
+	(cd api && virtualenv . -p python3)
+	(cd api && bin/pip install -r requirements.txt --upgrade)
 
 build-frontend:
-	(cd tests/create-react-app && yarn install)
-	(cd tests/create-react-app-with-redux && yarn install)
+	@echo "Build Frontend"
+	(cd frontend && yarn install)
 
 test:
 	@echo "Run Tests"
-	(cd tests/ && bin/pybot test.robot)
+	(cd api && bin/pybot test.robot)
