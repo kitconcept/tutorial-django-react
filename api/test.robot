@@ -11,6 +11,7 @@ ${BROWSER}              chrome
 Documentation   Django React Tutorial
 Library         Selenium2Library  timeout=30  implicit_wait=0
 Library         DjangoLibrary  localhost  55001  path=tutorial/quickstart  manage=manage.py  settings=tutorial.settings
+Library         OperatingSystem
 Library         WebpackLibrary
 # Library         ReactLibrary
 Library         DebugLibrary
@@ -55,6 +56,7 @@ Scenario: List Users
 Test Setup
   Start Chrome
   Start Django
+  Set Environment Variable  BROWSER  none
   Start Webpack  yarn start  path=../frontend
 
 
