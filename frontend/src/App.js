@@ -3,6 +3,7 @@ import './App.css';
 
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import Login from "./Login";
 import Users from './Users';
 
 const Home = () => (
@@ -28,11 +29,13 @@ const App = () => (
         <Link to="/">Home</Link>
         <Link to="/about-us">About</Link>
         <Link to="/users">Users</Link>
+        <Link to="/login">Login</Link>
       </header>
       <main>
         <Route exact path="/" component={Home} />
         <Route exact path="/about-us" component={About} />
         <Route exact path="/users" component={Users} />
+        <Route exact path="/login" component={Login} />
       </main>
     </div>
   </div>
