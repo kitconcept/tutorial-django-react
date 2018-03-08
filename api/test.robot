@@ -12,6 +12,7 @@ Documentation   Django React Tutorial
 Library         Selenium2Library  timeout=30  implicit_wait=0
 Library         DjangoLibrary  localhost  55001  path=tutorial/quickstart  manage=manage.py  settings=tutorial.settings
 Library         WebpackLibrary
+# Library         ReactLibrary
 Library         DebugLibrary
 Suite Setup     Test Setup
 Suite Teardown  Test Teardown
@@ -45,6 +46,7 @@ Scenario: List Users
   Click link  Users
   Wait until page contains  Users
   Wait until page contains  List of users
+  Wait until page contains  admin
   Page should contain  admin
   Page should contain  admin@example.com
 
