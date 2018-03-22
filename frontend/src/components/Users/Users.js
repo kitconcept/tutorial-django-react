@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-// import { getBaseUrl } from "./helpers/Url/Url";
-import getUsers from './actions/users/users';
+import { getUsers } from '../../actions';
 
 /**
  * Users container class.
@@ -52,15 +51,21 @@ class Users extends Component {
    */
 
   render() {
-    return <div>
+    return (
+      <div>
         <h1>Users</h1>
         <p>List of users</p>
         <ul>
           {this.props.items.map(function(listValue) {
-            return <li>{listValue.title} ({listValue.email})</li>;
+            return (
+              <li>
+                {listValue.title} ({listValue.email})
+              </li>
+            );
           })}
         </ul>
-      </div>;
+      </div>
+    );
   }
 }
 

@@ -9,7 +9,7 @@
  * @param {string} url Content url.
  * @returns {Object} Get user action.
  */
-export default function getUsers() {
+export function getUsers() {
   return {
     type: 'GET_USERS',
     promise: api => api.get(`users/`)

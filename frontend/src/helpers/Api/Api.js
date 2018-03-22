@@ -4,7 +4,7 @@
  */
 
 import superagent from 'superagent';
-// import cookie from 'react-cookie';
+import cookie from 'react-cookie';
 
 import config from '../../config';
 
@@ -40,10 +40,10 @@ export default class Api {
             request.query(params);
           }
 
-          /*const authToken = cookie.load('auth_token');
+          const authToken = cookie.load('auth_token');
           if (authToken) {
-            request.set('Authorization', `Bearer ${authToken}`);
-          }*/
+            request.set('Authorization', `JWT ${authToken}`);
+          }
 
           request.set('Accept', 'application/json');
 

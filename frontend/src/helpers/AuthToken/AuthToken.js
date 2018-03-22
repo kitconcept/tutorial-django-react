@@ -6,6 +6,8 @@
 import cookie from 'react-cookie';
 import jwtDecode from 'jwt-decode';
 
+import { LOGIN } from '../../constants/ActionTypes';
+
 /**
  * Get auth token method.
  * @method getAuthToken
@@ -23,6 +25,15 @@ export function getAuthToken() {
  */
 export function persistAuthToken(store) {
   let currentValue = getAuthToken();
+  const token = cookie.load('auth_token');
+  if (token) {
+    store.dispatch({
+      type: `${LOGIN}_SUCCESS`,
+      result: {
+        token
+      }
+    });
+  }
 
   /**
    * handleChange method.
@@ -47,5 +58,4 @@ export function persistAuthToken(store) {
   }
 
   store.subscribe(handleChange);
-  handleChange();
 }
