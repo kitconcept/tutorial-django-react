@@ -3,8 +3,7 @@ import './App.css';
 
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import Login from "./Login";
-import Users from './Users';
+import { Login, Users } from '../../components';
 
 const Home = () => (
   <div>

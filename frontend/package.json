@@ -10,7 +10,7 @@
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2",
     "react": "^16.2.0",
-    "react-cookie": "^2.1.2",
+    "react-cookie": "1.0.5",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-redux": "^5.0.6",
@@ -22,14 +22,9 @@
     "serialize-javascript": "^1.4.0",
     "superagent": "^3.8.2"
   },
-  "plugins": [
-    "add-module-exports"
-  ],
+  "plugins": ["add-module-exports"],
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
+    "src/**/*.{js,jsx,json,css}": ["prettier --single-quote --write", "git add"]
   },
   "scripts": {
     "precommit": "lint-staged",

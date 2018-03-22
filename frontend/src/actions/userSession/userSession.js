@@ -3,7 +3,7 @@
  * @module actions/search/search
  */
 
-import { LOGIN, LOGOUT } from "../../constants/ActionTypes";
+import { LOGIN, LOGOUT } from '../../constants/ActionTypes';
 
 /**
  * Login function.
@@ -15,7 +15,8 @@ import { LOGIN, LOGOUT } from "../../constants/ActionTypes";
 export function login(username, password) {
   return {
     type: LOGIN,
-    promise: api => api.post("@login", { data: { login: username, password } })
+    promise: api =>
+      api.post('api-token-auth/', { data: { username, password } })
   };
 }
 

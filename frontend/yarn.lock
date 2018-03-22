@@ -3083,10 +3083,6 @@ hoek@4.x.x:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.0.tgz#72d9d0754f7fe25ca2d01ad8f8f9a9449a89526d"
 
-hoist-non-react-statics@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
-
 hoist-non-react-statics@^2.2.1, hoist-non-react-statics@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
@@ -3450,6 +3446,10 @@ is-installed-globally@^0.1.0:
   dependencies:
     global-dirs "^0.1.0"
     is-path-inside "^1.0.0"
+
+is-node@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-node/-/is-node-1.0.2.tgz#d7d002745ef7debbb7477e988956ab0a4fccb653"
 
 is-npm@^1.0.0:
   version "1.0.0"
@@ -5336,7 +5336,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -5460,13 +5460,13 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-cookie@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/react-cookie/-/react-cookie-2.1.2.tgz#f8005f4d39e0ac906371ec45d7ed519851222f81"
+react-cookie@1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-cookie/-/react-cookie-1.0.5.tgz#234190bd55ddfea361444a89c873077ab6abf651"
   dependencies:
-    hoist-non-react-statics "^1.2.0"
-    prop-types "^15.0.0"
-    universal-cookie "^2.1.2"
+    cookie "^0.3.1"
+    is-node "^1.0.2"
+    object-assign "^4.1.0"
 
 react-dev-utils@^5.0.0:
   version "5.0.0"
@@ -6703,13 +6703,6 @@ unique-string@^1.0.0:
   resolved "https://registry.yarnpkg.com/unique-string/-/unique-string-1.0.0.tgz#9e1057cca851abb93398f8b33ae187b99caec11a"
   dependencies:
     crypto-random-string "^1.0.0"
-
-universal-cookie@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/universal-cookie/-/universal-cookie-2.1.2.tgz#7c0824c0e027f572789538932f066315611c2836"
-  dependencies:
-    cookie "^0.3.1"
-    object-assign "^4.1.0"
 
 universalify@^0.1.0:
   version "0.1.1"
