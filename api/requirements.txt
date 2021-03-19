@@ -12,7 +12,7 @@ cryptography==2.1.4
 enum34==1.1.6
 idna==2.6
 ipaddress==1.0.19
-Jinja2==2.10
+Jinja2==2.11.3
 MarkupSafe==1.0
 multi-key-dict==2.0.3
 paramiko==2.4.0
