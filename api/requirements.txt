@@ -23,7 +23,7 @@ pycparser==2.18
 Pygments==2.2.0
 PyNaCl==1.2.1
 python-jenkins==0.4.15
-PyYAML==3.12
+PyYAML==5.4
 robotframework==3.0.2
 robotframework-debuglibrary==1.1
 robotframework-djangolibrary
