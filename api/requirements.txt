@@ -4,7 +4,7 @@ pytz==2017.3
 django-cors-headers
 djangorestframework
 # Testing
-ansible==2.4.3.0
+ansible==2.9.20
 asn1crypto==0.24.0
 bcrypt==3.1.4
 cffi==1.11.5
