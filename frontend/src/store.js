@@ -2,11 +2,9 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
-import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
 import api from './middleware/api';
-import Api from './helpers/Api/Api';
-import userReducer from './reducers/users/users';
+import { Api, persistAuthToken } from './helpers';
+import reducers from './reducers';
 
 export const history = createHistory();
 
@@ -24,11 +22,8 @@ if (process.env.NODE_ENV === 'development') {
 
 const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
 
-const rootReducer = combineReducers({
-  routing: routerReducer,
-  users: userReducer
-});
+const store = createStore(reducers, initialState, composedEnhancers);
 
-const store = createStore(rootReducer, initialState, composedEnhancers);
+persistAuthToken(store);
 
 export default store;

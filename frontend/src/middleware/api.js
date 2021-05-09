@@ -10,7 +10,6 @@
  * @returns {Promise} Action promise.
  */
 export default api => ({ dispatch, getState }) => next => action => {
-
   if (typeof action === 'function') {
     return action(dispatch, getState);
   }
@@ -26,7 +25,7 @@ export default api => ({ dispatch, getState }) => next => action => {
   const actionPromise = promise(api);
   actionPromise.then(
     result => next({ ...rest, result, type: `${type}_SUCCESS` }),
-    error => next({ ...rest, error, type: `${type}_ERROR` })
+    error => next({ ...rest, error, type: `${type}_FAIL` })
   );
   /*
   .catch(error => {

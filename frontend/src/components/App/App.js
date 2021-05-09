@@ -3,7 +3,7 @@ import './App.css';
 
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import Users from './Users';
+import { Login, Users } from '../../components';
 
 const Home = () => (
   <div>
@@ -28,11 +28,13 @@ const App = () => (
         <Link to="/">Home</Link>
         <Link to="/about-us">About</Link>
         <Link to="/users">Users</Link>
+        <Link to="/login">Login</Link>
       </header>
       <main>
         <Route exact path="/" component={Home} />
         <Route exact path="/about-us" component={About} />
         <Route exact path="/users" component={Users} />
+        <Route exact path="/login" component={Login} />
       </main>
     </div>
   </div>
